@@ -1,0 +1,187 @@
+html {
+  height: 100%;
+}
+
+body {
+margin:0;
+padding:0;
+height: 100%;
+}
+div#header{
+width:100%;
+height:65px;
+position:fixed;
+z-index:100;
+text-align: center;
+margin: auto;
+ }
+
+ .navbar {
+   background-color: rgba(25, 55, 23, 0.2);
+ }
+
+div#content{
+background-color:#111;
+width:100%;
+height:100%;
+position:absolute;
+}
+
+#columns-container {
+  position:relative;
+  height: 150vh;
+  width: 100%;
+}
+
+.column {
+    position: absolute;
+}
+
+.column-a {
+    position: absolute;
+    z-index: 0;
+    background: url("bold-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+}
+h2 {
+  color: rgba(50,0,50,1);
+}
+
+.column-b {
+    position: absolute;
+    z-index: 0;
+    background: url("fashion-1.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+}
+h3 {
+  color: red;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+
+}
+
+/* Centered text */
+  div#centered {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(25, 25, 25, 0.45);
+    padding: 13px 13px 13px 13px;
+    color: white;
+    font-family: "Courier Prime";
+    font-size: 20px;
+    text-align: center;
+  }
+
+hr {
+    position: absolute;
+    z-index: 20;
+    display: block;
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    background-color:#656;
+    opacity: 0.5;
+    /*
+    margin-before: 0.5em;
+    margin-after: 0.5em;
+    margin-start: auto;
+    margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    */
+}
+
+div#footer{
+width:100%;
+height:65px;
+position:fixed;
+bottom:0;
+background-color: rgba(20, 20, 20, 0.1);
+}
+
+
+/*
+https://micahgianneli.com/wp-content/uploads/2018/04/Micah-Gianneli-Australian-Melbourne-Fashion-Blogger-Influencer-Photography-Street-Style-Vogue-Editorial-Luxury-Red-Dress-The-Dolls-House-Spanish-Gown-Silvia-Matei-Shoes-1.jpg
+header {
+  display: block;
+}
+
+/* Split the screen in half /
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side /
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side /
+.right {
+  right: 0;
+  background-color: red;
+}
+
+/* If you want the content centered horizontally and vertically /
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed /
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+
+}
