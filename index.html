@@ -8,32 +8,77 @@
 
       <title>The Three Tailors</title>
 
+      <!--CSS links -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="./css/styles.css">
-    </head>
+      <!--For social media buttons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--Linking my js file to the html-->
+      <script src="jQuery.js"></script>
 
+      <style type="text/css">.tk-proxima-nova-alt{font-family:"proxima-nova-alt", sans-serif;}</style>
+      <style type="text/css">
+      @font-face{font-family:proxima-nova-alt;src:url(https://use.typekit.net/af/958d44/00000000000000000000ff74/25/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/958d44/00000000000000000000ff74/25/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/958d44/00000000000000000000ff74/25/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova-alt;src:url(https://use.typekit.net/af/fc43b9/00000000000000000000ff78/25/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/fc43b9/00000000000000000000ff78/25/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/fc43b9/00000000000000000000ff78/25/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova-alt;src:url(https://use.typekit.net/af/25dd75/00000000000000000000ff7a/25/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/25dd75/00000000000000000000ff7a/25/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/25dd75/00000000000000000000ff7a/25/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}
+      </style>
+    </head>
     <body>
+      <!--Modal code at top so it shows up-->
+      <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="emailModalTitle">Sign up for exciting email updates!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01">First name</label>
+                    <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Name" required>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefaultUsername">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="validationDefaultUsername" placeholder="email@example.com" aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit" href="#">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation bar -->
       <header>
-        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light"> <!-- for bg colour:  style="background-color: #e3f2fd;" -->
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="./images/icon.png.png" alt="">
-          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text- uppercase ml-auto mr-auto">
-              <li class="nav-item active">
+        <!--      <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">P R O J E C T S</a>
-              </li>
+              </li> -->
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                B L O G
+                P R O J E C T S
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">SUMMER</a>
@@ -42,6 +87,12 @@
                   <a class="dropdown-item" href="#">BY COLOUR</a>
                 </div>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">B L O G</a>
+              </li>
+              <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="./images/icon.png.png" alt="">
+              </a>
               <li class="nav-item">
                 <a class="nav-link" href="#">A B O U T</a>
               </li>
@@ -58,32 +109,38 @@
   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form>
 -->
+      <!--Main page-->
       <main role="main">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
-          <ol class="carousel-indicators">
+      <!--    <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
+          </ol> -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="./images/fashion-0.jpg" alt="First slide" height="800px">
+              <img class="d-block w-100" src="./images/background-0.jpg" alt="First slide" height="650px">
               <div class="carousel-caption text-left d-none d-md-block">
-                <h1>The Three Tailors.</h1>
-                <p>Sign up to our newsletter to get tips on looking professional and fashionable at work.</p>
-                <p>
-                  <a class="btn btn-lg btn-primary" href="#" role="button">Sign up today!</a>
-                </p>
-                <!-- Have pop-up when you press button w/ sign-up form -->
+                <div style="background-color:rgba(0,0,0,0.5); text-align:left; vertical-align: middle; padding:20px 47px;">
+                  <h1>THE THREE TAILORS|</h1>
+                  <p>Sign up to our newsletter to get tips on looking professional and fashionable at work.</p>
+                  <p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#emailModal">
+                    Sign up today!
+                    </button>
+                    <!--Code for Modal with sign up form at top of html-->
+                    <div class="modal" tabindex="-1" role="dialog"></div>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="./images/fashion-6.jpg" alt="Second slide" height="800px">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="./images/fashion-7.jpg" alt="Third slide" height="800px">
-            </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/fashion-6.jpg" alt="Second slide" height="800px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/fashion-7.jpg" alt="Third slide" height="800px">
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,10 +151,55 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+      </div>
+
+          <!--
+
+-->
+
+        <!--Featurettes-->
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Your Wardrobe| Decoded.<br>
+              <span class="text-muted">Explore your options on our site.</span>
+            </h2>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="hover col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="./images/shoes-0.jpg" width="600px" height="500px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>S H O E S</h2> <hr>
+                    <p>Step into work in style with these on-trend shoes.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="hover col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="./images/blazer-0.jpg" width="600px" height="500px">
+                </div>
+                <div class="flip-box-back">
+                  <h2>J A C K E T S</h2>
+                  <p>Wrap up stylish with these fashionable cover-ups.</p>
+                </div>
+              </div>
+        </div>
 
         <br>
 
-        <!-- Features (in columns)-->
+        <!-- Features (in columns)--
         <div class="container marketing">
           <div class="row">
             <div class="col-lg-4">
@@ -125,15 +227,8 @@
               </p>
             </div>
           </div>
-          <!--Featurettes-->
-          <hr class="featurette-divider">
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">Your Wardrobe: Decoded.<br>
-                <span class="text-muted">Explore your options on our site.</span>
-              </h2>
-          </div>
-          <!-- other featurettes
+
+          <!-- other featurettes--
           <hr class="featurette-divider">
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -157,59 +252,109 @@
             style="width: 500px; height: 500px;" src="./images/fashion-4.jpg" data-holder-rendered="true">
             </div>
           </div>
-        -->
+
           <hr class="featurette-divider">
         </div>
+
+-->
         <br>
         <!-- Footer with social media buttons-->
-        <footer>
-          <div class="container">
+        <footer id="footer">
+          <div class="container-fluid">
             <div class="row">
-              <div class="col-md-4">
-                <span class="copyright">Copyright (C) The Three Tailors 2019</span>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-padder">
+                  <h5>EMAIL</h5>
+                  <p>
+                    <a href="mailto:blog@thethreetailors.iorg">blog@thethreetailors.com</a>
+                  </p>
+                </div>
+                <div class="footer-padder">
+                  <h5>TELEPHONE</h5>
+                  <p>555-0367</p>
+                </div>
               </div>
-            <div class="col-md-4">
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter">
-                      ::before
-                    </i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f">
-                      ::before
-                    </i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in">
-                      ::before
-                    </i>
-                  </a>
-                </li>
-              </ul>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-padder">
+                  <img class="footer-badge" src="./images/TTT-icon.png.png" alt="icon">
+                  <span class="copyright">Copyright (C) The Three Tailors 2019</span>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-padder">
+                  <h5>SOCIAL</h5>
+                  <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fa fa-facebook">
+                        </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fa fa-twitter">
+                        </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fa fa-instagram">
+                        </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fa fa-snapchat">
+                        </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fa fa-linkedin">
+                        </i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-padder">
+                  <h5>SIGN UP</h5>
+                <div id="mc_embed_signup">
+                  <form action="//thethreetailors/subscribe/post?u=407" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <input class="underline" type="email" id="mce-EMAIL" name="EMAIL" value placeholder="enter your@email"
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">
+            <div id="credits" class="col-xs-12">
               <ul class="list-inline quicklinks">
                 <li class="list-inline-item">
                   <a href="#">Privacy Policy</a>
                 <li class="list-inline-item">
+                  <a href="#">FAQs</a>
+                <li class="list-inline-item">
                   <a href="#">Terms of Use</a>
               </ul>
             </div>
+          </div>
         </footer>
       </main>
 
 
-      <!-- Bootstrap core JavaScript-->
+      <!--Bootstrap core JavaScript at bottom so site loads quicker-->
+        <!--jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
         <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+        <script src="https://connect.facebook.net/signals/config/1046939178781689?v=2.8.45&r=stable" async></script>
+        <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+        <script src="//use.typekit.net/pgd2cpk.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
 
     </body>
   </html>
