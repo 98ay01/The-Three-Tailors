@@ -1,12 +1,24 @@
-html {
-  height: 100%;
+
+html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-body {
-margin:0;
-padding:0;
-height: 100%;
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 960px;
+  margin: auto;
 }
+
+.Site-content {
+  flex: 1;
+}
+
 
 #mainNav {
   padding-top: 25px;
@@ -14,17 +26,49 @@ height: 100%;
   background-color: rgba(100,100,100,0.5);
 }
 
-.carousel-caption {
-  font-family: garamond;
+/* Search button*/
+.hide
+{
+  opacity: 0;
+  max-height: 0;
 }
 
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+#trigger {
+  position: absolute;
+  left: -999em;
+}
+
+#container input[type="checkbox"]:checked + div
+{
+  max-height: 99em;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.carousel-caption {
+  font-family: 'Freight Big Pro W01',Garamond,'Baskerville','Baskerville Old Face','Hoefler Text','Times New Roman',serif;
+}
+
+#modalButtonStyle {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+
+}
+
+h2, .text-muted {
+  font-family: 'Signerica W01';
+}
+
+/* The flip box container*/
 .flip-box {
   background-color: transparent;
   width: 600px;
   height: 500px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* This container is needed to position the front and back side */
@@ -35,11 +79,12 @@ height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 /* Position the front and back side */
@@ -61,5 +106,62 @@ height: 100%;
   background-color: rgba(0,0,0,0.8);
   text-align: center;
   color: white;
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
+}
+
+#centerFlip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Text inside flip-box*/
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#flipText {
+  color: white;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-7 {
+  max-width: 58.333333%;
+  flex: 0 0 58.333333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 58.3333%;
+}
+
+.col-md-5 {
+  max-width: 41.666667%;
+  flex: 0 0 41.666667%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 41.6667%;
+}
+
+
+
+/*#blogPost {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
